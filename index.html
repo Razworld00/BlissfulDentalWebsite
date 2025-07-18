@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blissful Cosmetic Dental Emporium</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'gold': '#D4AF37',
+                        'light-gold': '#F5E6AB',
+                        'dark-gold': '#996515',
+                        'pink': '#FFC0CB',
+                        'dark-pink': '#DB7093',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Poppins:wght@300;400;500;600&display=swap');
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #FFF9FB;
+        }
+        
+        h1, h2, h3, h4 {
+            font-family: 'Playfair Display', serif;
+        }
+        
+        .hero-section {
+            background: linear-gradient(rgba(212, 175, 55, 0.1), rgba(255, 192, 203, 0.1)), 
+                        url('assets/images/hero-bg.jpg'); /* Add hero background image later */
+            background-size: cover;
+            background-position: center;
+        }
+        
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+        
+        .gold-divider {
+            height: 3px;
+            background: linear-gradient(90deg, transparent, #D4AF37, transparent);
+        }
+        
+        .pink-divider {
+            height: 3px;
+            background: linear-gradient(90deg, transparent, #FFC0CB, transparent);
+        }
+        
+        .nav-link:hover::after {
+            content: '';
+            display: block;
+            width: 100%;
+            height: 2px;
+            background-color: #D4AF37;
+            margin-top: 2px;
+        }
+        
+        .review-card {
+            background: linear-gradient(135deg, rgba(255,255,255,0.9) 0%, rgba(255,240,245,0.9) 100%);
+        }
+    </style>
+</head>
+<body class="text-gray-700">
+    <!-- Header -->
+    <header class="bg-white shadow-md sticky top-0 z-50">
+        <div class="container mx-auto px-4 py-3 flex flex-col md:flex-row justify-between items-center">
+            <div class="logo flex items-center mb-4 md:mb-0">
+                <img src="assets/images/header-logo.png" alt="Blissful Cosmetic Dental Emporium Logo" class="w-16 h-16 rounded-full mr-3">
+                <h1 class="text-2xl md:text-3xl font-bold bg-gradient-to-r from-gold to-dark-pink bg-clip-text text-transparent">
+                    Blissful Cosmetic Dental Emporium
+                </h1>
+            </div>
+            
+            <nav class="w-full md:w-auto">
+                <ul class="flex flex-wrap justify-center space-x-1 md:space-x-6">
+                    <li><a href="#home" class="nav-link px-3 py-2 text-dark-pink hover:text-gold font-medium transition">Home</a></li>
+                    <li><a href="#services" class="nav-link px-3 py-2 text-dark-pink hover:text-gold font-medium transition">Services</a></li>
+                    <li><a href="#offers" class="nav-link px-3 py-2 text-dark-pink hover:text-gold font-medium transition">Offers</a></li>
+                    <li><a href="#contact" class="nav-link px-3 py-2 text-dark-pink hover:text-gold font-medium transition">Contact</a></li>
+                    <li><a href="#reviews" class="nav-link px-3 py-2 text-dark-pink hover:text-gold font-medium transition">Reviews</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="gold-divider"></div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-section min-h-screen flex items-center justify-center text-center px-4 py-20">
+        <div class="container mx-auto max-w-4xl bg-white bg-opacity-90 rounded-xl p-8 md:p-12 shadow-xl">
+            <h2 class="text-4xl md:text-5xl font-bold mb-6 text-dark-pink">Welcome to Blissful Cosmetic Dental Emporium</h2>
+            <p class="text-lg mb-4 text-gray-600">Where advanced aesthetics and timeless luxury meet.</p>
+            <div class="gold-divider my-6 w-1/2 mx-auto"></div>
+            <p class="text-lg mb-6 text-gray-600">Immerse yourself in results-driven skincare, rejuvenating massage treatments, flawless nails, and professional waxing – all delivered with precision and care in a serene space.</p>
+            <p class="text-xl font-semibold mb-8 text-gold"><i class="fas fa-star mr-2"></i>Launching soon. Experience the art of beauty and self-care redefined.</p>
+            <button onclick="alert('Follow us to be the first to book!')" class="bg-gradient-to-r from-gold to-dark-pink text-white px-8 py-3 rounded-full font-semibold hover:shadow-lg transform hover:scale-105 transition duration-300">
+                Follow Us <i class="fas fa-heart ml-2"></i>
+            </button>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-16 bg-pink-50">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 text-dark-pink relative">
+                <span class="relative inline-block">
+                    Our Services
+                    <span class="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-gold to-pink"></span>
+                </span>
+            </h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Service 1 -->
+                <div class="service-card bg-white rounded-xl overflow-hidden shadow-md transition duration-500">
+                    <div class="h-48 bg-gradient-to-br from-gold to-pink flex items-center justify-center text-white text-5xl">
+                        <i class="fas fa-tooth"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-3 text-dark-pink">Cosmetic Dentistry</h3>
+                        <p class="text-gray-600 mb-4">Transform your smile with our premium cosmetic dental treatments including veneers, bonding, and smile makeovers.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-gold font-bold">From R1500</span>
+                            <button class="text-dark-pink hover:text-gold transition">
+                                <i class="fas fa-arrow-right"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Service 2 -->
+                <div class="service-card bg-white rounded-xl overflow-hidden shadow-md transition duration-500">
+                    <div class="h-48 bg-gradient-to-br from-pink to-gold flex items-center justify-center text-white text-5xl">
+                        <i class="fas fa-spa"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-3 text-dark-pink">Teeth Whitening</h3>
+                        <p class="text-gray-600 mb-4">Professional teeth whitening treatments that will brighten your smile by several shades in just one session.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-gold font-bold">From R1200</span>
+                            <button class="text-dark-pink hover:text-gold transition">
+                                <i class="fas fa-arrow-right"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Service 3 -->
+                <div class="service-card bg-white rounded-xl overflow-hidden shadow-md transition duration-500">
+                    <div class="h-48 bg-gradient-to-br from-gold to-dark-pink flex items-center justify-center text-white text-5xl">
+                        <i class="fas fa-teeth-open"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-3 text-dark-pink">Dental Implants</h3>
+                        <p class="text-gray-600 mb-4">Permanent solution for missing teeth that look, feel and function like natural teeth with our premium implants.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-gold font-bold">From R8000</span>
+                            <button class="text-dark-pink hover:text-gold transition">
+                                <i class="fas fa-arrow-right"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Service 4 -->
+                <div class="service-card bg-white rounded-xl overflow-hidden shadow-md transition duration-500">
+                    <div class="h-48 bg-gradient-to-br from-dark-pink to-gold flex items-center justify-center text-white text-5xl">
+                        <i class="fas fa-teeth"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-3 text-dark-pink">Invisalign</h3>
+                        <p class="text-gray-600 mb-4">Discreet orthodontic treatment with clear aligners that gradually straighten your teeth without metal braces.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-gold font-bold">From R25000</span>
+                            <button class="text-dark-pink hover:text-gold transition">
+                                <i class="fas fa-arrow-right"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Service 5 -->
+                <div class="service-card bg-white rounded-xl overflow-hidden shadow-md transition duration-500">
+                    <div class="h-48 bg-gradient-to-br from-pink to-light-gold flex items-center justify-center text-white text-5xl">
+                        <i class="fas fa-toothbrush"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-3 text-dark-pink">Preventive Care</h3>
+                        <p class="text-gray-600 mb-4">Comprehensive dental check-ups, cleanings, and preventive treatments to maintain optimal oral health.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-gold font-bold">From R600</span>
+                            <button class="text-dark-pink hover:text-gold transition">
+                                <i class="fas fa-arrow-right"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Service 6 -->
+                <div class="service-card bg-white rounded-xl overflow-hidden shadow-md transition duration-500">
+                    <div class="h-48 bg-gradient-to-br from-light-gold to-pink flex items-center justify-center text-white text-5xl">
+                        <i class="fas fa-gem"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-3 text-dark-pink">Luxury Spa Dentistry</h3>
+                        <p class="text-gray-600 mb-4">Combine dental care with spa relaxation - heated massage chairs, aromatherapy, and paraffin wax hand treatments.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-gold font-bold">From R2000</span>
+                            <button class="text-dark-pink hover:text-gold transition">
+                                <i class="fas fa-arrow-right"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Offers Section -->
+    <section id="offers" class="py-16 bg-gradient-to-b from-light-gold to-pink-100">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 text-dark-pink">
+                Seasonal Offers
+            </h2>
+            
+            <div class="max-w-3xl mx-auto bg-white rounded-xl shadow-xl overflow-hidden">
+                <div class="md:flex">
+                    <div class="md:w-1/3 bg-gradient-to-b from-gold to-dark-gold flex items-center justify-center p-6">
+                        <div class="text-center text-white">
+                            <div class="text-5xl font-bold mb-2">25% OFF</div>
+                            <div class="text-xl">Select Treatments</div>
+                        </div>
+                    </div>
+                    <div class="md:w-2/3 p-8">
+                        <h3 class="text-2xl font-bold mb-4 text-dark-pink">25% Off Select BioMedical Skin Treatments</h3>
+                        <p class="text-gray-600 mb-4">Including or excluding microneedling this winter. Winter is the perfect time to indulge in some self-care and keep your skin protected from the elements.</p>
+                        <p class="font-semibold mb-4 text-gold"><i class="fas fa-gem mr-2"></i>Treat yourself to our hydrating, anti-aging, glow & complexion peels (incl. microneedling).</p>
+                        <p class="text-gray-600 mb-6">Offer starts today. Contact us for bookings & enquiries.</p>
+                        <button onclick="alert('Booking form coming soon!')" class="bg-gradient-to-r from-dark-pink to-gold text-white px-6 py-2 rounded-full font-medium hover:shadow-md transition">
+                            Book Now <i class="fas fa-calendar-check ml-2"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mt-12">
+                <div class="bg-white rounded-xl p-6 shadow-md border-l-4 border-gold">
+                    <h3 class="text-xl font-bold mb-3 text-dark-pink">New Patient Special</h3>
+                    <p class="text-gray-600 mb-4">Comprehensive exam, cleaning, and X-rays for just R1200 (normally R1800). Limited time offer for first-time patients.</p>
+                    <span class="inline-block bg-gold text-white text-sm px-3 py-1 rounded-full">New Patients Only</span>
+                </div>
+                
+                <div class="bg-white rounded-xl p-6 shadow-md border-l-4 border-pink">
+                    <h3 class="text-xl font-bold mb-3 text-dark-pink">Referral Bonus</h3>
+                    <p class="text-gray-600 mb-4">Refer a friend and both receive R500 credit towards any cosmetic treatment when they complete their first appointment.</p>
+                    <span class="inline-block bg-pink text-white text-sm px-3 py-1 rounded-full">Limited Time</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 text-dark-pink">
+                Contact Us
+            </h2>
+            
+            <div class="flex flex-col md:flex-row gap-8 max-w-6xl mx-auto">
+                <div class="md:w-1/2 bg-pink-50 rounded-xl p-8 shadow-lg">
+                    <h3 class="text-2xl font-bold mb-6 text-dark-pink border-b-2 border-gold pb-2">Get In Touch</h3>
+                    
+                    <div class="space-y-6">
+                        <div class="flex items-start">
+                            <div class="bg-gold text-white p-3 rounded-full mr-4">
+                                <i class="fas fa-phone-alt"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-gray-700">Phone</h4>
+                                <p class="text-gray-600">043 050 4085</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="bg-gold text-white p-3 rounded-full mr-4">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-gray-700">Email</h4>
+                                <p class="text-gray-600">admin@blissfuldental.co.za</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="bg-gold text-white p-3 rounded-full mr-4">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-gray-700">Address</h4>
+                                <p class="text-gray-600">123 Luxury Lane, East London, South Africa</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="bg-gold text-white p-3 rounded-full mr-4">
+                                <i class="fas fa-clock"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-gray-700">Hours</h4>
+                                <p class="text-gray-600">Monday to Thursday: 8:30am - 7:30pm</p>
+                                <p class="text-gray-600">Friday: 8:30am - 5:00pm</p>
+                                <p class="text-gray-600">Saturday: 9:00am - 1:00pm (by appointment)</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="mt-8">
+                        <h4 class="font-bold text-gray-700 mb-4">Follow Us</h4>
+                        <div class="flex space-x-4">
+                            <a href="#" class="bg-gold text-white p-3 rounded-full hover:bg-dark-gold transition">
+                                <i class="fab fa-facebook-f"></i>
+                            </a>
+                            <a href="#" class="bg-gold text-white p-3 rounded-full hover:bg-dark-gold transition">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                            <a href="#" class="bg-gold text-white p-3 rounded-full hover:bg-dark-gold transition">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="md:w-1/2 bg-gradient-to-br from-light-gold to-pink-100 rounded-xl p-8 shadow-lg">
+                    <h3 class="text-2xl font-bold mb-6 text-dark-pink border-b-2 border-white pb-2">Book An Appointment</h3>
+                    
+                    <form class="space-y-4">
+                        <div>
+                            <label for="name" class="block text-gray-700 font-medium mb-1">Full Name</label>
+                            <input type="text" id="name" class="w-full px-4 py-2 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-gold">
+                        </div>
+                        
+                        <div>
+                            <label for="email" class="block text-gray-700 font-medium mb-1">Email</label>
+                            <input type="email" id="email" class="w-full px-4 py-2 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-gold">
+                        </div>
+                        
+                        <div>
+                            <label for="phone" class="block text-gray-700 font-medium mb-1">Phone</label>
+                            <input type="tel" id="phone" class="w-full px-4 py-2 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-gold">
+                        </div>
+                        
+                        <div>
+                            <label for="service" class="block text-gray-700 font-medium mb-1">Service</label>
+                            <select id="service" class="w-full px-4 py-2 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-gold">
+                                <option>Select a service</option>
+                                <option>Cosmetic Dentistry</option>
+                                <option>Teeth Whitening</option>
+                                <option>Dental Implants</option>
+                                <option>Invisalign</option>
+                                <option>Preventive Care</option>
+                                <option>Luxury Spa Dentistry</option>
+                            </select>
+                        </div>
+                        
+                        <div>
+                            <label for="date" class="block text-gray-700 font-medium mb-1">Preferred Date</label>
+                            <input type="date" id="date" class="w-full px-4 py-2 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-gold">
+                        </div>
+                        
+                        <div>
+                            <label for="message" class="block text-gray-700 font-medium mb-1">Message</label>
+                            <textarea id="message" rows="3" class="w-full px-4 py-2 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-gold"></textarea>
+                        </div>
+                        
+                        <button type="submit" class="w-full bg-gradient-to-r from-dark-pink to-gold text-white py-3 rounded-lg font-semibold hover:shadow-lg transition">
+                            Submit Request <i class="fas fa-paper-plane ml-2"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Reviews Section -->
+    <section id="reviews" class="py-16 bg-pink-50">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 text-dark-pink">
+                What Our Clients Say
+            </h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto">
+                <!-- Review 1 -->
+                <div class="review-card rounded-xl p-8 shadow-lg relative">
+                    <div class="absolute top-0 left-0 w-full h-2 bg-gradient-to-r from-gold to-pink"></div>
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 rounded-full bg-gradient-to-br from-gold to-pink flex items-center justify-center text-white font-bold mr-4">
+                            MJ
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-dark-pink">Mark Jonker</h4>
+                            <div class="flex text-gold">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 mb-4">"No pain, quick, friendly and professional service. I am so grateful I got an appointment with you. The best dentist I have been to so far."</p>
+                    <div class="text-sm text-pink-600">
+                        <i class="fas fa-reply mr-2"></i>Blissful Cosmetic Dental Emporium: We're so happy you had a good experience at your first visit Mark. Thank you for your support 🙏💫.
+                    </div>
+                </div>
+                
+                <!-- Review 2 -->
+                <div class="review-card rounded-xl p-8 shadow-lg relative">
+                    <div class="absolute top-0 left-0 w-full h-2 bg-gradient-to-r from-pink to-gold"></div>
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 rounded-full bg-gradient-to-br from-pink to-gold flex items-center justify-center text-white font-bold mr-4">
+                            SA
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-dark-pink">Sarah Adams</h4>
+                            <div class="flex text-gold">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 mb-4">"The luxury spa dentistry experience is unlike anything else! I actually look forward to my dental appointments now. My teeth have never looked better."</p>
+                    <div class="text-sm text-pink-600">
+                        <i class="fas fa-reply mr-2"></i>Blissful Cosmetic Dental Emporium: Thank you Sarah! We're thrilled you're enjoying our unique approach to dental care.
+                    </div>
+                </div>
+                
+                <!-- Review 3 -->
+                <div class="review-card rounded-xl p-8 shadow-lg relative md:col-span-2">
+                    <div class="absolute top-0 left-0 w-full h-2 bg-gradient-to-r from-gold to-dark-pink"></div>
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 rounded-full bg-gradient-to-br from-gold to-dark-pink flex items-center justify-center text-white font-bold mr-4">
+                            TJ
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-dark-pink">Thandiwe Johnson</h4>
+                            <div class="flex text-gold">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 mb-4">"After years of being afraid of dentists, I finally found a practice that makes me feel comfortable. The staff are incredibly kind and patient. My Invisalign treatment has transformed my smile and my confidence. Worth every penny!"</p>
+                    <div class="text-sm text-pink-600">
+                        <i class="fas fa-reply mr-2"></i>Blissful Cosmetic Dental Emporium: Your transformation has been amazing to witness Thandiwe! We're honored to be part of your journey.
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-12">
+                <button onclick="alert('More reviews coming soon!')" class="bg-gradient-to-r from-gold to-dark-pink text-white px-8 py-3 rounded-full font-semibold hover:shadow-lg transition">
+                    Read More Reviews <i class="fas fa-chevron-right ml-2"></i>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark-pink text-white py-8">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-6 md:mb-0">
+                    <div class="flex items-center">
+                        <img src="assets/images/header-logo.png" alt="Blissful Cosmetic Dental Emporium Logo" class="w-12 h-12 rounded-full mr-3">
+                        <h2 class="text-2xl font-bold">Blissful Cosmetic Dental Emporium</h2>
+                    </div>
+                    <p class="mt-2 text-pink-200">Where your smile meets luxury.</p>
+                </div>
+                
+                <div class="flex space-x-6">
+                    <a href="#" class="hover:text-gold transition"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="hover:text-gold transition"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="hover:text-gold transition"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="hover:text-gold transition"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+            
+            <div class="border-t border-pink-300 mt-8 pt-8 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-pink-200 mb-4 md:mb-0">© 2025 Blissful Cosmetic Dental Emporium. All rights reserved.</p>
+                
+                <div class="flex space-x-4">
+                    <a href="#" class="text-pink-200 hover:text-white transition">Privacy Policy</a>
+                    <a href="#" class="text-pink-200 hover:text-white transition">Terms of Service</a>
+                    <a href="#" class="text-pink-200 hover:text-white transition">Sitemap</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+        
+        // Animation for service cards on scroll
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animate-fadeInUp');
+                }
+            });
+        }, {threshold: 0.1});
+        
+        document.querySelectorAll('.service-card').forEach(card => {
+            observer.observe(card);
+            card.classList.add('opacity-0', 'transition-all', 'duration-500', 'ease-out');
+        });
+    </script>
+</body>
+</html>
